@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-*)z1=ka)5e*1j^1_ed8_q@q=$j$vh(vyk!#jl!%$n--$3i1y$p
 DEBUG = True
 
 ALLOWED_HOSTS = ['http://192.168.30.201:8000/', '192.168.30.201:8000', '192.168.30.201', 'localhost','http://127.0.0.1:8000', '127.0.0.1']
-
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    '192.168.30.201',
+    'backend-ue5j.onrender.com' # <--- CORRECTED: Added the Render domain
+]
 
 # Application definition
 
@@ -56,6 +60,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'MyProject.urls'
+CSRF_TRUSTED_ORIGINS = ['https://backend-ue5j.onrender.com']
 
 TEMPLATES = [
     {
