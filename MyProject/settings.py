@@ -32,6 +32,8 @@ ALLOWED_HOSTS = [
     'backend-ue5j.onrender.com' # <--- CORRECTED: Added the Render domain
 ]
 
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/',]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -65,7 +67,7 @@ CSRF_TRUSTED_ORIGINS = ['https://backend-ue5j.onrender.com']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "MyProject" / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
